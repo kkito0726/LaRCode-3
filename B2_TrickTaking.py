@@ -17,25 +17,29 @@ if not T in C:
     C[0] = T
 
 # 空リストを作る
-pass_R = []
+pass_Rs = []
 
-# 空リストに、Tと値が一致したCに対応したRを、[何番目の、何という値か]の形で加えていく
+# 空リストに、Tと値が一致したCに対応するRのみを、[index、Rの値]の形で加えていく
 for i in range(N):
     if C[i] == T:
-        pass_R.append([i, R[i]])
+        pass_Rs.append([i, R[i]])
 
 
-##### ２．最大値のRを求め、答えを出力する #####
+##### ２．最大値のRを求め、答えを出力 #####
 
 # 基準値を設定する
 max_value = 0
 
+# player, value関数を用意する
+player = 0
+value = 0
+
 # 基準値より大きい場合は更新する
-for sublist in pass_R:
-    if sublist[1] > max_value:
-        max_value = sublist[1]
+for pass_R in pass_Rs:
+    pass_R = player, value
+    if value > max_value:
+        max_value = value
 
 # Rが最大値になる選手番号を抽出する
-for a, b in pass_R:
-    if b == max_value:
-        print(a+1)
+if value == max_value:
+    print(player)
