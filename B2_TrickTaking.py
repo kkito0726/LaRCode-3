@@ -14,7 +14,7 @@ R = list(map(int, input().split()))
 
 # C列にTがない場合、C列最初の値をTとする
 if not T in C:
-    C[0] = T
+    T = C[0]
 
 # 空リストを作る
 pass_Rs = []
@@ -29,17 +29,14 @@ for i in range(N):
 
 # 基準値を設定する
 max_value = 0
-
-# player, value関数を用意する
-player = 0
-value = 0
+max_player = 0
 
 # 基準値より大きい場合は更新する
 for pass_R in pass_Rs:
-    pass_R = player, value
+    player, value = pass_R
     if value > max_value:
         max_value = value
+        max_player = player 
 
 # Rが最大値になる選手番号を抽出する
-if value == max_value:
-    print(player)
+print(max_player + 1)
