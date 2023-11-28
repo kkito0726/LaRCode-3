@@ -23,7 +23,7 @@ victory = []
 for i in range(N):
     if (X in A[i]) == True:
         M.append(C[i])
-        
+#print(M)
 #当たった人の中でかけた数が少ない人をvictoryリストに入れてる
 if len(M) > 0:
     for n in range(len(M)):
@@ -36,13 +36,7 @@ if len(M) > 0:
 else :
     M.append(0)
     print(' '.join(map(str,M)) ) 
+#print(C)
 #リストを文字列にしてます。        
-#出力2
-for k in range(N):
-    if (X in A[k]) == False:
-        C[k] = None
-print(C)
-print(min(C))
-#for n in range(N):
-#    if (X in A[i]) == True and C[i] = min(C):
+
         

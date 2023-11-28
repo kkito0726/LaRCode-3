@@ -22,4 +22,6 @@ for i in range(N):
         total += P[0]
 #お会計に移らせていただきます
 print(total)
+
+
         
