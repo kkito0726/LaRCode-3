@@ -7,12 +7,12 @@ N, M = map(int, input().split())
 C = list(input().split())
 D = list(input().split())
 P = list(map(int, input().split()))
-result = []
+list = []
 ans = 0
 for i in range(N):
     if C[i] in D:
-        result.append(D.index(C[i])+1)
+        list.append(D.index(C[i])+1)
     elif C[i] not in D:
-            result.append(0)
-    ans += P[result[i]]
+            list.append(0)
+    ans += P[list[i]]
 print(ans)
