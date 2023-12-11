@@ -34,14 +34,3 @@ if len(match) == 0:
     print(0)
 else :
     print(max(ans)+1)
-
-            
-
-
-   
-            
-            
-    
- 
-
-    
