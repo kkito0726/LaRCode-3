@@ -6,9 +6,8 @@ B問題
 n = int(input())  # nはint型
 num_list = list(map(int, input().split()))  # n個の数字がリストに格納される
 
-new_list = sorted(num_list)
-
+num_list.sort()
 for i in range(n) :
-    if new_list[i+1] - new_list[i] != 1:
-         print(new_list[i]+1)
-         break
+    if num_list[i+1] - num_list[i] != 1 :
+        print(num_list[i]+1)
+        break
